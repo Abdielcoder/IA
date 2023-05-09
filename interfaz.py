@@ -1,8 +1,12 @@
 import openai
 import PySimpleGUI as sg
+from dotenv import load_dotenv
+import os
+
+load_dotenv() # carga las variables de entorno desde el archivo .env
 
 # Configura la API key de OpenAI
-openai.api_key = "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"
+openai.api_key = os.getenv("OPENAI_API_KEY")
 context = "Somos una empresa dedicada al desarrollo de agentes de seguros, con más de 18 años de experiencia formada por un equipo de profesionales en la asesoría, administración de riesgos a través de planes financieros y de seguros, siempre de acuerdo a las necesidades de nuestros clientes. Esto nos ha permitido ganar diversos reconocimientos nacionales e internacionales de calidad y productividad. Así como extender nuestras oficinas a distintas ciudades, tales como: Tijuana, Monterrey, Hermosillo y Los Cabos,Desarrollar Agentes de seguros cuya misión sea proteger el patrimonio, proyectos de vida, así como la capacidad productiva de personas, familias y empresas en México.,Proteger a 200,000 clientes a través de agentes certificados en 10 ciudades estratégicas respaldados por los mejores productos con un equipo de colaboradores de gran calidad humana, comprometidos con una cultura de innovación y servicio.,"
 # Crea la ventana con las dos cajas de texto
 layout = [
